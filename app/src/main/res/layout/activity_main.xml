@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -20,7 +25,7 @@
             android:layout_height="wrap_content"
             android:text="Selamat Datang,"
             android:textSize="14sp"
-            android:textColor="#2D2A26">
+            android:textColor="#2D2A26" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -34,7 +39,7 @@
 
     <!--Bagian Kartu Ringkasan-->
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginBottom="24dp">
@@ -45,9 +50,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:background="FFFFFF"
+            android:background="#FFFFFF"
             android:padding="16dp"
-            android:layoutmarginEnd="8dp">
+            android:layout_marginEnd="8dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -60,7 +65,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tvJumlahTugas"
-                android:text="3"
+                android:text="5"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="#D63031"
@@ -68,8 +73,9 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="vertical"
             android:background="#FFFFFF"
             android:padding="16dp"
@@ -86,13 +92,66 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tvRataNilai"
-                android:text="88.5"
+                android:text="87.6"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="#00B894"
                 android:layout_marginTop="4dp"/>
         </LinearLayout>
     </LinearLayout>
+
+    <!--Banner Pengumuman dengan frame layout-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginBottom="24dp" >
+
+        <!--Layer 1 : Backgroud lapisan belakang-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#0984E3"/>
+
+        <!--Layer 2 : Teks Pengumuman lapisan depan-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PENGUMUMAN PENTING"
+                android:textSize="11sp"
+                android:textColor="#DFE6E9"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ujian Kopetensi RPL Dimulai hari Jumat ini"
+                android:textSize="14sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <!--Tombol untuk ke halaman form-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TombolForm"
+        android:text="+ Tambah Tugas"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#0984E3"
+        android:layout_marginBottom="16dp"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
 
     <!--Bagian Judul : DaftarTugas Terbaru-->
     <TextView
@@ -129,5 +188,5 @@
             android:layout_marginTop="4dp"/>
 
     </LinearLayout>
-
 </LinearLayout>
+    </FrameLayout>
